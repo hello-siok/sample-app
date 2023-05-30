@@ -30,9 +30,6 @@ messagesRouter.get(
   validateAccessToken,
   checkRequiredPermissions([AdminMessagesPermissions.Read]),
   (req, res) => {
-    //const message = getAdminMessage();
-
-    //res.status(200).json(message);
     res.status(200).json(report);
   }
 );

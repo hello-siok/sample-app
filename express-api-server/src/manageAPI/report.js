@@ -1,13 +1,16 @@
 // pull report from manage API
 const axios = require('axios');
+const dotenv = require("dotenv");
 const { auth } = require('express-oauth2-jwt-bearer');
 
-const client_id = "X2HjV8KsX703AdGhpKztBos6pgmJYj4Q";
-const client_secret = "9ibO1oCR8eAeVIfcPawOG3IxFV_P8r5-wEzZk6_NvREaUlPCYdKwdkb4xAkMJd9Z";
-const audience = "https://dev-fbz1l8vopdo0g0hj.us.auth0.com/api/v2/";
+dotenv.config();
+
+const client_id = process.env.CLIENT_ID;
+const client_secret = process.env.CLIENT_SECRET;
+const audience = "https://"+ process.env.AUTH0_DOMAIN + "/api/v2/";
 const grant_type = "client_credentials";
-const auth_url = "https://dev-fbz1l8vopdo0g0hj.us.auth0.com/oauth/token";
-const report_url = "https://dev-fbz1l8vopdo0g0hj.us.auth0.com/api/v2/actions/actions";
+const auth_url = "https://"+ process.env.AUTH0_DOMAIN + "/oauth/token";
+const report_url = "https://"+ process.env.AUTH0_DOMAIN + "/api/v2/actions/actions";
 
 let data = {client_id: client_id, client_secret: client_secret, audience: audience, grant_type: grant_type};
 
