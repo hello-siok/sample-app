@@ -26,7 +26,7 @@
 }
 
 .code-snippet__container {
-  min-height: 32.4rem;
+  min-height: 9rem;
   background-color: var(--dark-aluminium);
   overflow-x: auto;
 }

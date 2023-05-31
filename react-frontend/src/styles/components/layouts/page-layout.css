@@ -24,3 +24,11 @@
     margin-top: 6.4rem;
   }
 }
+
+.mycode {
+  background-color: #f1f1f1;
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  white-space: pre;
+  font-size: 0.8em;
+}
